@@ -9,11 +9,11 @@ document.body.addEventListener('click', function(e) {
     if (e.target.classList.contains("like-glyph")) {
         mimicServerCall()
         .then(function (res) {
-          if (res === true) {
-            if (e.target === EMPTY_HEART) {
-              e.target = FULL_HEART
-            } else if (e.target.value === FULL_HEART) {
-              e.target = EMPTY_HEART
+          if (res === "Pretend remote server notified of action!") {
+            if (e.target.innerText === EMPTY_HEART) {
+              e.target.innerText = FULL_HEART
+            } else if (e.target.innerText === FULL_HEART) {
+              e.target.innerText = EMPTY_HEART
             } 
           } 
         })
